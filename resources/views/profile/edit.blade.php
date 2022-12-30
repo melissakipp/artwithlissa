@@ -24,6 +24,13 @@
                     @include('profile.partials.delete-user-form')
                 </div>
             </div>
+            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
+                <div class="max-w-xl">
+                    <x-nav-link :href="route('trashed.index')" :active="request()->routeIs('trashed.index')">
+                        {{ __('Trash') }}
+                    </x-nav-link>
+                </div>
+            </div>
         </div>
     </div>
 </x-app-layout>
