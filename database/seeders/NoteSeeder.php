@@ -15,6 +15,6 @@ class NoteSeeder extends Seeder
      */
     public function run()
     {
-        Note::factory(50);
+        Note::factory()->times(20);
     }
 }
