@@ -25,11 +25,14 @@
                     </div>
                 </header>
             @endif
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
         </div>
+
+        <main>
+            @yield('content')
+        </main>
+
+        <footer>
+            @include('layouts.footer')
+        </footer>
     </body>
 </html>
