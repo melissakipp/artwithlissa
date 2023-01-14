@@ -6,8 +6,8 @@ Technology stack:
 -	VueJS
 -	MySQL
 
-<img src="resources/images/20230114_landingpage.png" alt="Landing page">
-<img src="resources/images/20230114_login.png" alt="Login form">
+<img src="https://github.com/melissakipp/artwithlissa/blob/main/resources/images/readme/20230114_landingpage.png" alt="Landing page">
+<img src="https://github.com/melissakipp/artwithlissa/blob/main/resources/images/readme/20230114_login.png" alt="Login form">
 <img src="https://github.com/melissakipp/artwithlissa/blob/main/resources/images/readme/20230114_dashboard.png" alt="Dashboard">
 
 **Dependencies**
@@ -38,7 +38,7 @@ To set up database with TablePlus
 1.	“Create a new connection…” 
 2. Example: Development Configurations
 
-<img src="./resources/images/20230114_database-configs.png" alt="Landing page">
+<img src="https://github.com/melissakipp/artwithlissa/blob/main/resources/images/readme/20230114_database-configs.png" alt="Landing page">
 
 <p><em>NOTE: the .env and TablePlus connection configurations need to match. Run the next command to make a copy of the .env file and rename it.</em></p>
 
