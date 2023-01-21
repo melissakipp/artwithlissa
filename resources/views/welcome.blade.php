@@ -39,6 +39,7 @@
 
     <div>
         <h2>Main content</h2>
+        <a href="/posts">Posts</a>
     </div>
 
     <footer>

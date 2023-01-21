@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid');
-            $table->foreignId('user_id')->constrained();
+//            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id');
             $table->string('title');
             $table->longText('text');
             $table->timestamps();

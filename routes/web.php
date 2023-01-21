@@ -1,8 +1,12 @@
 <?php
 
 use App\Http\Controllers\NoteController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\TrashedNoteController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Category;
+use App\Models\Post;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,5 +42,31 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+//Route::get('/posts', function () {
+//    return view('layouts.post', [
+//        'posts' => Post::latest('updated_at')->with('category', 'author')->get()
+//    ]);
+//});
+//
+//Route::get('posts/{post:slug}', function (Post $post) {
+//    return view('posts.post', [
+//        'post' => $post
+//    ]);
+//});
+//
+//Route::get('categories/{category:slug}', function (Category $category) {
+//    return view('posts.posts', [
+//        'posts' => $category->posts
+//    ]);
+//});
+//
+//Route::get('authors/{author}', function (User $author) {
+//    return view('posts.posts', [
+//        'posts' => $author->posts
+//    ]);
+//});
+
+Route::get('/posts', [PostController::class, 'index']);
 
 require __DIR__.'/auth.php';

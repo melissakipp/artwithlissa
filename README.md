@@ -72,6 +72,6 @@ npm run dev
 
 The application should now be running on your localhost. You can access it by opening a web browser and navigating to http://localhost
 
-License
+## License
 This project is open-sourced software licensed under the MIT license.
 
