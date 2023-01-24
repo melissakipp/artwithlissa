@@ -40,6 +40,7 @@
                 <h1 class="text-5xl">
                     Art with Lissa
                 </h1>
+                <a href="/posts">Blog Posts</a>
             </main>
 
         </div>

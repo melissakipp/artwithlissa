@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\NoteController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TrashedNoteController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +33,18 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('/notes', NoteController::class)->middleware(['auth']);
+
+Route::resource('/posts', PostController::class);
+
+//Route::get('/posts', function () {
+//    return view('posts.index');
+//});
+//
+//Route::get('post/{post:slug}', function (Post $post) {
+//    return view('posts.show', [
+//        'post' => $post
+//    ]);
+//});
 
 Route::prefix('/trashed')->name('trashed.')->middleware('auth')->group(function(){
     Route::get('/', [TrashedNoteController::class, 'index'])->name('index');

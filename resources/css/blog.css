@@ -1,0 +1,26 @@
+.blog-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-container .post-container {
+    max-width: 800px;
+}
+
+.category-tag {
+    margin: 0 0 1rem 0;
+}
+
+.category-tag a {
+    background-color: lightgrey;
+    border-radius: 8px;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+.category-tag a:hover {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
