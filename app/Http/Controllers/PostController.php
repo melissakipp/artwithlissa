@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use function Psy\sh;
@@ -13,10 +14,17 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index() //Post $post, Category $category
     {
+        // if category is selected
+//        if ($post->category != null) {
+//            return view('posts.index', [
+//                'posts' => $category->posts
+//            ]);
+//        }
+        // returns all post (recent first)
         return view('posts.index', [
-            'posts' => Post::all()
+            'posts' => Post::with('category')->get()
         ]);
     }
     /**

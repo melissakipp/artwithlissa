@@ -4,6 +4,7 @@ use App\Http\Controllers\NoteController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TrashedNoteController;
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,12 @@ Route::middleware('auth')->group(function () {
 Route::resource('/notes', NoteController::class)->middleware(['auth']);
 
 Route::resource('/posts', PostController::class);
+
+Route::get('category/{category:slug}', function (Category $category) {
+    return view('posts.index', [
+        'posts' => $category->posts
+    ]);
+});
 
 //Route::get('/posts', function () {
 //    return view('posts.index');
