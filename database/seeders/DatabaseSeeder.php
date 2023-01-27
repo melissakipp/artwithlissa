@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -20,14 +18,13 @@ class DatabaseSeeder extends Seeder
     {
 
         Schema::disableForeignKeyConstraints();
-        User::truncate();
-        Post::truncate();
-        Category::trancate();
 
-        Post::factory()->create();
+        User::truncate();
+        User::factory()->create();
+
+//        Post::truncate();
+//        Post::factory(5)->create();
 
         Schema::enableForeignKeyConstraints();
-
-
     }
 }
