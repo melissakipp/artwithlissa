@@ -14,4 +14,6 @@ class BlogLayout extends Component
     {
         return view('layouts.blog');
     }
+
+    //change
 }
